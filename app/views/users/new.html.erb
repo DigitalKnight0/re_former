@@ -18,3 +18,13 @@
     <%= password_field_tag(:password) %>
     <%= submit_tag("Submit") %>
 <% end %> -->
+
+<%= form_with model: @user do |form| %>
+    <%= form.label :username, "Enter your username"%>
+    <%= form.text_field :username, value: "user123"%>
+    <%= form.label :email, "Enter your email"%>
+    <%= form.email_field :email, placeholder: "example@example.com"%>
+    <%= form.label :password, "Enter your password"%>
+    <%= form.password_field :password%>
+    <%= form.submit%> 
+<% end %>
